@@ -1,13 +1,11 @@
 function countvowel(str) {
-  arr = str.split("");
   let vowellist = "aeiouAEIOU";
-  let vcount = "";
-  for (let i = 0; i < arr.length; i++) {
-    let vcount = 0;
-    if (vcount === vowellist) {
-      console.log(i);
-      vcount++;
-      break;
+  let vcount = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < vowellist.length; j++) {
+      if (vowellist[j] === str[i]) {
+        vcount++;
+      }
     }
   }
   return vcount;
